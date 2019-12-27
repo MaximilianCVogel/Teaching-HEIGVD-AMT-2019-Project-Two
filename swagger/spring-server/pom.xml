@@ -49,10 +49,10 @@
                                 <useBeanValidation>true</useBeanValidation>
                                 <interfaceOnly>true</interfaceOnly>
                                 <delegatePattern>false</delegatePattern>
-                                <apiPackage>io.avalia.fruits.api</apiPackage>
-                                <configPackage>io.avalia.fruits.config</configPackage>
-                                <basePackage>io.avalia.fruits</basePackage>
-                                <modelPackage>io.avalia.fruits.api.model</modelPackage>
+                                <apiPackage>ch.heigvd.boozify.beers.api</apiPackage>
+                                <configPackage>ch.heigvd.boozify.beers.config</configPackage>
+                                <basePackage>ch.heigvd.boozify.beers</basePackage>
+                                <modelPackage>ch.heigvd.boozify.beers.model</modelPackage>
                             </configOptions>
                         </configuration>
                     </execution>
