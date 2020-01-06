@@ -25,6 +25,18 @@ paths:
           description: created
           schema:
             type: object
+    get:
+      description: get a list of all beers
+      operationId: getBeers
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Beer'
 
   /beers/{name}:
     get:
@@ -60,8 +72,20 @@ paths:
           description: created
           schema:
             type: object
+    get:
+      description: get a list of all companies
+      operationId: getCompanies
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Company'
 
-  /company/{name}:
+  /companies/{name}:
      get:
        description: get a company
        operationId: getCompany
