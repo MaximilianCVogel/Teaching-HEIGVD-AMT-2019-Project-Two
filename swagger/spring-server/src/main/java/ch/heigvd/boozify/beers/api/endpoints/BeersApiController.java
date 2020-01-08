@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -26,7 +27,6 @@ public class BeersApiController implements BeersApi {
 
     @Autowired
     BeerRepository beerRepository;
-
 
     public ResponseEntity<Object> createBeer(@ApiParam(value = "", required = true) @Valid @RequestBody Beer beer) {
         BeerEntity newBeerEntity = toBeerEntity(beer);
@@ -62,6 +62,13 @@ public class BeersApiController implements BeersApi {
         beerEntityToChange.setType(beer.getType());
 
         beerRepository.save(beerEntityToChange);
+
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
+    @Transactional
+    public ResponseEntity<Void> deleteBeer(@ApiParam(value = "",required=true) @PathVariable("name") String name) {
+        beerRepository.deleteByName(name);
 
         return new ResponseEntity<>(null, HttpStatus.OK);
     }

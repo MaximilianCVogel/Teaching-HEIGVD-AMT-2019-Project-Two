@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -60,6 +61,13 @@ public class CompaniesApiController implements CompaniesApi {
         companyEntityToChange.setName(company.getName());
 
         companyRepository.save(companyEntityToChange);
+
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
+    @Transactional
+    public ResponseEntity<Void> deleteCompany(@ApiParam(value = "",required=true) @PathVariable("name") String name) {
+        companyRepository.deleteByName(name);
 
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
