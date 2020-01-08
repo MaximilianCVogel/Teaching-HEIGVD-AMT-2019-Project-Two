@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -37,22 +38,19 @@ public class CompaniesApiController implements CompaniesApi {
         return ResponseEntity.created(location).build();
     }
 
-
     public ResponseEntity<List<Company>> getCompanies() {
         List<Company> companies = new ArrayList<>();
         for (CompanyEntity companyEntity : companyRepository.findAll()) {
             companies.add(toCompany(companyEntity));
         }
-        /*
-        Company staticCompany = new Company();
-        staticCompany.setName("WeMakeBeers");
-        staticCompany.setAddress("Beer Street 2, London, UK");
-        List<Company> Companies = new ArrayList<>();
-        companies.add(staticCompany);
-        */
         return ResponseEntity.ok(companies);
     }
 
+    public ResponseEntity<Company> getCompany(@ApiParam(value = "",required=true) @PathVariable("name") String name) {
+        CompanyEntity companyEntity = companyRepository.findByName(name);
+        Company company = toCompany(companyEntity);
+        return ResponseEntity.ok(company);
+    }
 
     private CompanyEntity toCompanyEntity(Company company) {
         CompanyEntity entity = new CompanyEntity();

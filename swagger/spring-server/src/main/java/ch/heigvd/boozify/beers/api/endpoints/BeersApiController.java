@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -38,23 +39,19 @@ public class BeersApiController implements BeersApi {
         return ResponseEntity.created(location).build();
     }
 
-
     public ResponseEntity<List<Beer>> getBeers() {
         List<Beer> beers = new ArrayList<>();
         for (BeerEntity beerEntity : beerRepository.findAll()) {
             beers.add(toBeer(beerEntity));
         }
-        /*
-        Beer staticBeer = new Beer();
-        staticBeer.setName("Feldschlösschen");
-        staticBeer.setType("blond");
-        staticBeer.setAlcohol("6");
-        List<Beer> beers = new ArrayList<>();
-        beers.add(staticBeer);
-        */
         return ResponseEntity.ok(beers);
     }
 
+    public ResponseEntity<Beer> getBeer(@ApiParam(value = "",required=true) @PathVariable("name") String name) {
+        BeerEntity beerEntity = beerRepository.findByName(name);
+        Beer beer = toBeer(beerEntity);
+        return ResponseEntity.ok(beer);
+    }
 
     private BeerEntity toBeerEntity(Beer beer) {
         BeerEntity entity = new BeerEntity();
