@@ -321,6 +321,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Swagger2SpringBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="swagger-spring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ch.heigvd.boozify.beers.Swagger2SpringBoot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -389,7 +396,8 @@
       <workItem from="1578301303161" duration="4249000" />
       <workItem from="1578305681379" duration="3943000" />
       <workItem from="1578321910729" duration="11720000" />
-      <workItem from="1578460464922" duration="847000" />
+      <workItem from="1578460464922" duration="3219000" />
+      <workItem from="1578475860124" duration="1613000" />
     </task>
     <servers />
   </component>
@@ -420,25 +428,25 @@
     </state>
     <state x="626" y="219" key="FileChooserDialogImpl/67.27.1533.873@67.27.1533.873" timestamp="1578301608322" />
     <state x="653" y="218" width="424" height="484" key="FileChooserDialogImpl/67.27.1606.869@67.27.1606.869" timestamp="1576658660549" />
-    <state width="1487" height="219" key="GridCell.Tab.0.bottom" timestamp="1578461203503">
+    <state width="1487" height="219" key="GridCell.Tab.0.bottom" timestamp="1578474916227">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1578461203503" />
+    <state width="1487" height="219" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1578474916227" />
     <state width="1564" height="280" key="GridCell.Tab.0.bottom/67.27.1610.873@67.27.1610.873" timestamp="1576577371990" />
-    <state width="1487" height="219" key="GridCell.Tab.0.center" timestamp="1578461203502">
+    <state width="1487" height="219" key="GridCell.Tab.0.center" timestamp="1578474916226">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1578461203502" />
+    <state width="1487" height="219" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1578474916226" />
     <state width="1564" height="280" key="GridCell.Tab.0.center/67.27.1610.873@67.27.1610.873" timestamp="1576577371988" />
-    <state width="1487" height="219" key="GridCell.Tab.0.left" timestamp="1578461203502">
+    <state width="1487" height="219" key="GridCell.Tab.0.left" timestamp="1578474916226">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1578461203502" />
+    <state width="1487" height="219" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1578474916226" />
     <state width="1564" height="280" key="GridCell.Tab.0.left/67.27.1610.873@67.27.1610.873" timestamp="1576577371986" />
-    <state width="1487" height="219" key="GridCell.Tab.0.right" timestamp="1578461203502">
+    <state width="1487" height="219" key="GridCell.Tab.0.right" timestamp="1578474916227">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1578461203502" />
+    <state width="1487" height="219" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1578474916227" />
     <state width="1564" height="280" key="GridCell.Tab.0.right/67.27.1610.873@67.27.1610.873" timestamp="1576577371989" />
     <state width="1487" height="219" key="GridCell.Tab.1.bottom" timestamp="1577461644170">
       <screen x="67" y="27" width="1533" height="873" />
