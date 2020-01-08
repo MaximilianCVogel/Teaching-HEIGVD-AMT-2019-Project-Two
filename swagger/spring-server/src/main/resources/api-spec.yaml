@@ -70,7 +70,7 @@ paths:
           schema:
             $ref: '#/definitions/Beer'
       responses:
-        '201':
+        '200':
           description: beer updated
     delete:
       description: delete a beer from the encyclopedia
@@ -146,7 +146,7 @@ paths:
            schema:
              $ref: '#/definitions/Company'
        responses:
-         '201':
+         '200':
            description: company updated
      delete:
        description: delete a company from the encyclopedia

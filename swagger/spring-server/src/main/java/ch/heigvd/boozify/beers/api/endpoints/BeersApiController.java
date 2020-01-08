@@ -7,6 +7,7 @@ import ch.heigvd.boozify.beers.model.Beer;
 import ch.heigvd.boozify.beers.repositories.BeerRepository;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -51,6 +52,18 @@ public class BeersApiController implements BeersApi {
         BeerEntity beerEntity = beerRepository.findByName(name);
         Beer beer = toBeer(beerEntity);
         return ResponseEntity.ok(beer);
+    }
+
+    public ResponseEntity<Void> updateBeer(@ApiParam(value = "",required=true) @PathVariable("name") String name, @ApiParam(value = "", required = true) @Valid @RequestBody Beer beer) {
+        BeerEntity beerEntityToChange = beerRepository.findByName(name);
+
+        beerEntityToChange.setName(beer.getName());
+        beerEntityToChange.setAlcohol(beer.getAlcohol());
+        beerEntityToChange.setType(beer.getType());
+
+        beerRepository.save(beerEntityToChange);
+
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
     private BeerEntity toBeerEntity(Beer beer) {

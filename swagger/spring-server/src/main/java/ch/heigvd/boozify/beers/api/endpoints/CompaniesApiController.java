@@ -7,6 +7,7 @@ import ch.heigvd.boozify.beers.model.Company;
 import ch.heigvd.boozify.beers.repositories.CompanyRepository;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,6 +51,17 @@ public class CompaniesApiController implements CompaniesApi {
         CompanyEntity companyEntity = companyRepository.findByName(name);
         Company company = toCompany(companyEntity);
         return ResponseEntity.ok(company);
+    }
+
+    public ResponseEntity<Void> updateCompany(@ApiParam(value = "",required=true) @PathVariable("name") String name, @ApiParam(value = "", required = true) @Valid @RequestBody Company company) {
+        CompanyEntity companyEntityToChange = companyRepository.findByName(name);
+
+        companyEntityToChange.setAddress(company.getAddress());
+        companyEntityToChange.setName(company.getName());
+
+        companyRepository.save(companyEntityToChange);
+
+        return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
     private CompanyEntity toCompanyEntity(Company company) {
