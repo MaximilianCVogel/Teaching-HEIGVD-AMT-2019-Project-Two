@@ -31,11 +31,11 @@ public class CompaniesApiController implements CompaniesApi {
     public ResponseEntity<Object> createCompany(@ApiParam(value = "", required = true) @Valid @RequestBody Company company) {
         CompanyEntity newCompanyEntity = toCompanyEntity(company);
         companyRepository.save(newCompanyEntity);
-        Long id = newCompanyEntity.getId();
+        String name = newCompanyEntity.getName();
 
         URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest().path("/{id}")
-                .buildAndExpand(newCompanyEntity.getId()).toUri();
+                .fromCurrentRequest().path("/{name}")
+                .buildAndExpand(newCompanyEntity.getName()).toUri();
 
         return ResponseEntity.created(location).build();
     }
@@ -54,6 +54,7 @@ public class CompaniesApiController implements CompaniesApi {
         return ResponseEntity.ok(company);
     }
 
+    @Transactional
     public ResponseEntity<Void> updateCompany(@ApiParam(value = "",required=true) @PathVariable("name") String name, @ApiParam(value = "", required = true) @Valid @RequestBody Company company) {
         CompanyEntity companyEntityToChange = companyRepository.findByName(name);
 

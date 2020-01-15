@@ -31,11 +31,11 @@ public class BeersApiController implements BeersApi {
     public ResponseEntity<Object> createBeer(@ApiParam(value = "", required = true) @Valid @RequestBody Beer beer) {
         BeerEntity newBeerEntity = toBeerEntity(beer);
         beerRepository.save(newBeerEntity);
-        Long id = newBeerEntity.getId();
+        //String name = newBeerEntity.getName();
 
         URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest().path("/{id}")
-                .buildAndExpand(newBeerEntity.getId()).toUri();
+                .fromCurrentRequest().path("/{name}")
+                .buildAndExpand(newBeerEntity.getName()).toUri();
 
         return ResponseEntity.created(location).build();
     }
@@ -54,6 +54,7 @@ public class BeersApiController implements BeersApi {
         return ResponseEntity.ok(beer);
     }
 
+    @Transactional
     public ResponseEntity<Void> updateBeer(@ApiParam(value = "",required=true) @PathVariable("name") String name, @ApiParam(value = "", required = true) @Valid @RequestBody Beer beer) {
         BeerEntity beerEntityToChange = beerRepository.findByName(name);
 

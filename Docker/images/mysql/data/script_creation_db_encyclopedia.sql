@@ -2,21 +2,25 @@ CREATE DATABASE IF NOT EXISTS encyclopedia_amt CHARACTER SET utf8 COLLATE utf8_g
 
 USE encyclopedia_amt;
 
-CREATE TABLE IF NOT EXISTS beers
+CREATE TABLE IF NOT EXISTS beer_entity
 ( 
-    name VARCHAR(255) PRIMARY KEY UNIQUE NOT NULL, 
+    beer_id BIGINT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) UNIQUE NOT NULL, 
     type VARCHAR(255) NOT NULL,
-    alcohol INT NOT NULL DEFAULT 0
+    alcohol INT NOT NULL DEFAULT 0,
+    PRIMARY KEY (beer_id)
 ) CHARACTER SET=utf8 COLLATE utf8_general_ci;
 
-CREATE TABLE IF NOT EXISTS companies
-( 
-    name VARCHAR(255) PRIMARY KEY UNIQUE NOT NULL, 
-    address VARCHAR(255) NOT NULL
+CREATE TABLE IF NOT EXISTS company_entity
+(
+    company_id BIGINT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) UNIQUE NOT NULL, 
+    address VARCHAR(255) NOT NULL,
+    PRIMARY KEY (company_id)
 ) CHARACTER SET=utf8 COLLATE utf8_general_ci;
 
-INSERT INTO beers(`name`, `type`, `alcohol`) VALUES
+INSERT INTO beer_entity(`name`, `type`, `alcohol`) VALUES
 ('Chouffe','blonde', 5), ('Trappiste','brune', 7), ('Punk IPA','ipa', 9);
 
-INSERT INTO companies(`name`, `address`) VALUES
+INSERT INTO company_entity(`name`, `address`) VALUES
 ('Brasserie Machin-truc','Rue de la bière 5, Belgique'), ('Aachener Braeuerei','Hauptstrasse 32, Berlin'), ('Modern Brewzkies','Dope street 38, England');

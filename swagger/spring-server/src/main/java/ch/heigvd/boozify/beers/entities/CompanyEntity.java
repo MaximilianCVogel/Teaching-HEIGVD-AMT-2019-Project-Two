@@ -11,13 +11,13 @@ public class CompanyEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long company_id;
 
     private String name;
     private String address;
 
-    public long getId() {
-        return id;
+    public Long getCompany_id() {
+        return company_id;
     }
 
     public String getName() {

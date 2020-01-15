@@ -11,15 +11,13 @@ public class BeerEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long beer_id;
 
     private String name;
     private String type;
     private int alcohol;
 
-    public long getId() {
-        return id;
-    }
+    public Long getBeer_id() { return beer_id; }
 
     public String getName() {
         return name;
