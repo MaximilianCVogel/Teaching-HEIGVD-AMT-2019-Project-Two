@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS encyclopedia_amt CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS inventory_amt CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-USE encyclopedia_amt;
+USE inventory_amt;
 
 CREATE TABLE IF NOT EXISTS beer_entity
 ( 

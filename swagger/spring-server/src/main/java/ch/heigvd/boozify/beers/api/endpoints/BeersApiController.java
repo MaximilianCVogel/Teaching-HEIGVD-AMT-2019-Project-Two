@@ -1,6 +1,5 @@
 package ch.heigvd.boozify.beers.api.endpoints;
 
-
 import ch.heigvd.boozify.beers.api.BeersApi;
 import ch.heigvd.boozify.beers.entities.BeerEntity;
 import ch.heigvd.boozify.beers.model.Beer;

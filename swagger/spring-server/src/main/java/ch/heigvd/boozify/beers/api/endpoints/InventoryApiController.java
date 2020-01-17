@@ -1,6 +1,6 @@
 package ch.heigvd.boozify.beers.api.endpoints;
 
-import ch.heigvd.boozify.beers.api.EncyclopediaApi;
+import ch.heigvd.boozify.beers.api.InventoryApi;
 import ch.heigvd.boozify.beers.entities.BarEntity;
 import ch.heigvd.boozify.beers.repositories.BarRepository;
 import ch.heigvd.boozify.beers.entities.BeerEntity;
@@ -16,7 +16,7 @@ import java.util.List;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2017-07-26T19:36:34.802Z")
 
 @Controller
-public class EncyclopediaApiController implements EncyclopediaApi {
+public class InventoryApiController implements InventoryApi {
 
     @Autowired
     BeerRepository beerRepository;

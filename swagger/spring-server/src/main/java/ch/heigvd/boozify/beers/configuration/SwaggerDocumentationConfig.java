@@ -18,7 +18,7 @@ public class SwaggerDocumentationConfig {
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
             .title("Beers API")
-            .description("This api creates and manages beers, as well as the companies that make them")
+            .description("This api creates and manages beers, as well as the bars that serve them")
             .license("")
             .licenseUrl("http://unlicense.org")
             .termsOfServiceUrl("")

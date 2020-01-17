@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: '0.1.0'
-  title: Boozify Encyclopedia
-  description: An API to interact with an encyclopedia about beers and the bars that serve them
+  title: Boozify Inventory
+  description: An API to interact with bars serving beers
 host: localhost:8070
 basePath: /api
 schemes:
@@ -73,7 +73,7 @@ paths:
         '200':
           description: beer updated
     delete:
-      description: delete a beer from the encyclopedia
+      description: delete a beer
       operationId: deleteBeer
       parameters:
         - name: name
@@ -149,7 +149,7 @@ paths:
         '200':
           description:  bar updated
     delete:
-      description: delete a bar from the encyclopedia
+      description: delete a bar
       operationId: deleteBar
       parameters:
         - name: name
@@ -160,7 +160,7 @@ paths:
         "204":
           description: bar deleted
 
-  /encyclopedia:
+  /inventory:
     get:
       description: for testing purposes
       operationId: getTest
