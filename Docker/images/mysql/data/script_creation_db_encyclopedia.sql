@@ -11,16 +11,16 @@ CREATE TABLE IF NOT EXISTS beer_entity
     PRIMARY KEY (beer_id)
 ) CHARACTER SET=utf8 COLLATE utf8_general_ci;
 
-CREATE TABLE IF NOT EXISTS company_entity
+CREATE TABLE IF NOT EXISTS bar_entity
 (
-    company_id BIGINT NOT NULL AUTO_INCREMENT,
+    bar_id BIGINT NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) UNIQUE NOT NULL, 
     address VARCHAR(255) NOT NULL,
-    PRIMARY KEY (company_id)
+    PRIMARY KEY (bar_id)
 ) CHARACTER SET=utf8 COLLATE utf8_general_ci;
 
 INSERT INTO beer_entity(`name`, `type`, `alcohol`) VALUES
 ('Chouffe','blonde', 5), ('Trappiste','brune', 7), ('Punk IPA','ipa', 9);
 
-INSERT INTO company_entity(`name`, `address`) VALUES
+INSERT INTO bar_entity(`name`, `address`) VALUES
 ('Brasserie Machin-truc','Rue de la bière 5, Belgique'), ('Aachener Braeuerei','Hauptstrasse 32, Berlin'), ('Modern Brewzkies','Dope street 38, England');
