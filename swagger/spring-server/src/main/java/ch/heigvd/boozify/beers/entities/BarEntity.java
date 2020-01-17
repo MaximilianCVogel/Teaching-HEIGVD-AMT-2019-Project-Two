@@ -7,17 +7,17 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-public class CompanyEntity implements Serializable {
+public class BarEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long company_id;
+    private Long bar_id;
 
     private String name;
     private String address;
 
-    public Long getCompany_id() {
-        return company_id;
+    public Long getBar_id() {
+        return bar_id;
     }
 
     public String getName() {

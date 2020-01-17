@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: '0.1.0'
   title: Boozify Encyclopedia
-  description: An API to interact with a encyclopedia about beers and the companies that make them
+  description: An API to interact with an encyclopedia about beers and the bars that serve them
 host: localhost:8070
 basePath: /api
 schemes:
@@ -84,26 +84,26 @@ paths:
         "204":
           description: beer deleted
 
-  /companies:
+  /bars:
     post:
-      description: create a company
-      operationId: createCompany
+      description: create a bar
+      operationId: createBar
       consumes:
         - application/json
       parameters:
-        - name: company
+        - name: bar
           in: body
           required: true
           schema:
-            $ref: '#/definitions/Company'
+            $ref: '#/definitions/Bar'
       responses:
         '201':
-          description: company created
+          description: bar created
           schema:
             type: object
     get:
-      description: get a list of all companies
-      operationId: getCompanies
+      description: get a list of all bars
+      operationId: getBars
       produces:
         - application/json
       responses:
@@ -112,53 +112,61 @@ paths:
           schema:
             type: array
             items:
-              $ref: '#/definitions/Company'
+              $ref: '#/definitions/Bar'
 
-  /companies/{name}:
-     get:
-       description: get a company
-       operationId: getCompany
-       produces:
-         - application/json
-       parameters:
-         - name: name
-           in: path
-           required: true
-           type: string
-       responses:
-         '200':
-           description: success
-           schema:
-             $ref: '#/definitions/Company'
-     patch:
-       description: update a company's information
-       operationId: updateCompany
-       consumes:
-         - application/json
-       parameters:
-         - name: name
-           in: path
-           required: true
-           type: string
-         - name: company
-           in: body
-           required: true
-           schema:
-             $ref: '#/definitions/Company'
-       responses:
-         '200':
-           description: company updated
-     delete:
-       description: delete a company from the encyclopedia
-       operationId: deleteCompany
-       parameters:
-         - name: name
-           in: path
-           required: true
-           type: string
-       responses:
-         "204":
-           description: company deleted
+  /bars/{name}:
+    get:
+      description: get a bar
+      operationId: getBar
+      produces:
+        - application/json
+      parameters:
+        - name: name
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: success
+          schema:
+            $ref: '#/definitions/Bar'
+    patch:
+      description: update a bar's information
+      operationId: updateBar
+      consumes:
+        - application/json
+      parameters:
+        - name: name
+          in: path
+          required: true
+          type: string
+        - name: bar
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Bar'
+      responses:
+        '200':
+          description:  bar updated
+    delete:
+      description: delete a bar from the encyclopedia
+      operationId: deleteBar
+      parameters:
+        - name: name
+          in: path
+          required: true
+          type: string
+      responses:
+        "204":
+          description: bar deleted
+
+  /encyclopedia:
+    get:
+      description: for testing purposes
+      operationId: getTest
+      responses:
+        "200":
+          description: test ok
 
 definitions:
   Beer:
@@ -171,7 +179,7 @@ definitions:
       alcohol:
         type: integer
 
-  Company:
+  Bar:
     type: object
     properties:
       name:

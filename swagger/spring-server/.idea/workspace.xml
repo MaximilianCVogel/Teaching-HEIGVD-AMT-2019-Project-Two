@@ -398,7 +398,7 @@
       <workItem from="1578321910729" duration="11720000" />
       <workItem from="1578460464922" duration="3219000" />
       <workItem from="1578475860124" duration="2477000" />
-      <workItem from="1578843284314" duration="8600000" />
+      <workItem from="1578843284314" duration="17917000" />
     </task>
     <servers />
   </component>
@@ -428,30 +428,34 @@
       <screen x="67" y="27" width="1533" height="873" />
     </state>
     <state x="641" y="149" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/67.27.1533.873@67.27.1533.873" timestamp="1578303558355" />
+    <state x="114" y="27" width="1420" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579084532484">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state x="114" y="27" width="1420" height="873" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1533.873@67.27.1533.873" timestamp="1579084532484" />
     <state x="626" y="219" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578301608322">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
     <state x="626" y="219" key="FileChooserDialogImpl/67.27.1533.873@67.27.1533.873" timestamp="1578301608322" />
     <state x="653" y="218" width="424" height="484" key="FileChooserDialogImpl/67.27.1606.869@67.27.1606.869" timestamp="1576658660549" />
-    <state width="1487" height="219" key="GridCell.Tab.0.bottom" timestamp="1579077844684">
+    <state width="1487" height="219" key="GridCell.Tab.0.bottom" timestamp="1579181954078">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1579077844684" />
+    <state width="1487" height="219" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1579181954078" />
     <state width="1564" height="280" key="GridCell.Tab.0.bottom/67.27.1610.873@67.27.1610.873" timestamp="1576577371990" />
-    <state width="1487" height="219" key="GridCell.Tab.0.center" timestamp="1579077844683">
+    <state width="1487" height="219" key="GridCell.Tab.0.center" timestamp="1579181954077">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1579077844683" />
+    <state width="1487" height="219" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1579181954077" />
     <state width="1564" height="280" key="GridCell.Tab.0.center/67.27.1610.873@67.27.1610.873" timestamp="1576577371988" />
-    <state width="1487" height="219" key="GridCell.Tab.0.left" timestamp="1579077844683">
+    <state width="1487" height="219" key="GridCell.Tab.0.left" timestamp="1579181954076">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1579077844683" />
+    <state width="1487" height="219" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1579181954076" />
     <state width="1564" height="280" key="GridCell.Tab.0.left/67.27.1610.873@67.27.1610.873" timestamp="1576577371986" />
-    <state width="1487" height="219" key="GridCell.Tab.0.right" timestamp="1579077844684">
+    <state width="1487" height="219" key="GridCell.Tab.0.right" timestamp="1579181954077">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1579077844684" />
+    <state width="1487" height="219" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1579181954077" />
     <state width="1564" height="280" key="GridCell.Tab.0.right/67.27.1610.873@67.27.1610.873" timestamp="1576577371989" />
     <state width="1487" height="219" key="GridCell.Tab.1.bottom" timestamp="1577461644170">
       <screen x="67" y="27" width="1533" height="873" />
