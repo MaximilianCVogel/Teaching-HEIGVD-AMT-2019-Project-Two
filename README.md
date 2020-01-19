@@ -28,3 +28,7 @@ Pour pouvoir se connecter à nos applications, vous allez devoir générer un JW
 
 La documentation concernant l'implémentation des APIs se trouve 
 [ici](Documentation/implementation.md).
+
+# Difficultés
+
+Sur la branche feature/beer-cyclopedia le dossier swagger2 doit être renommé en swagger pour que le projet fonctionne.
