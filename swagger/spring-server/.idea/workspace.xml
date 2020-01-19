@@ -56,6 +56,13 @@
       <recent name="ch.heigvd.boozify.beers.api.endpoints" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
   <component name="RunManager" selected="Application.Swagger2SpringBoot">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
@@ -371,7 +378,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -398,7 +415,8 @@
       <workItem from="1578321910729" duration="11720000" />
       <workItem from="1578460464922" duration="3219000" />
       <workItem from="1578475860124" duration="2477000" />
-      <workItem from="1578843284314" duration="19968000" />
+      <workItem from="1578843284314" duration="25068000" />
+      <workItem from="1579375323301" duration="14294000" />
     </task>
     <servers />
   </component>
@@ -437,25 +455,25 @@
     </state>
     <state x="626" y="219" key="FileChooserDialogImpl/67.27.1533.873@67.27.1533.873" timestamp="1578301608322" />
     <state x="653" y="218" width="424" height="484" key="FileChooserDialogImpl/67.27.1606.869@67.27.1606.869" timestamp="1576658660549" />
-    <state width="1487" height="219" key="GridCell.Tab.0.bottom" timestamp="1579270847402">
+    <state width="721" height="494" key="GridCell.Tab.0.bottom" timestamp="1579437469599">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1579270847402" />
+    <state width="721" height="494" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1579437469599" />
     <state width="1564" height="280" key="GridCell.Tab.0.bottom/67.27.1610.873@67.27.1610.873" timestamp="1576577371990" />
-    <state width="1487" height="219" key="GridCell.Tab.0.center" timestamp="1579270847402">
+    <state width="721" height="494" key="GridCell.Tab.0.center" timestamp="1579437469598">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1579270847402" />
+    <state width="721" height="494" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1579437469598" />
     <state width="1564" height="280" key="GridCell.Tab.0.center/67.27.1610.873@67.27.1610.873" timestamp="1576577371988" />
-    <state width="1487" height="219" key="GridCell.Tab.0.left" timestamp="1579270847402">
+    <state width="721" height="494" key="GridCell.Tab.0.left" timestamp="1579437469597">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1579270847402" />
+    <state width="721" height="494" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1579437469597" />
     <state width="1564" height="280" key="GridCell.Tab.0.left/67.27.1610.873@67.27.1610.873" timestamp="1576577371986" />
-    <state width="1487" height="219" key="GridCell.Tab.0.right" timestamp="1579270847402">
+    <state width="721" height="494" key="GridCell.Tab.0.right" timestamp="1579437469598">
       <screen x="67" y="27" width="1533" height="873" />
     </state>
-    <state width="1487" height="219" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1579270847402" />
+    <state width="721" height="494" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1579437469598" />
     <state width="1564" height="280" key="GridCell.Tab.0.right/67.27.1610.873@67.27.1610.873" timestamp="1576577371989" />
     <state width="1487" height="219" key="GridCell.Tab.1.bottom" timestamp="1577461644170">
       <screen x="67" y="27" width="1533" height="873" />
@@ -481,6 +499,18 @@
       <screen x="67" y="27" width="1533" height="873" />
     </state>
     <state x="366" y="120" width="924" height="684" key="Maven.ArtifactSearchDialog/67.27.1533.873@67.27.1533.873" timestamp="1578461032563" />
+    <state x="487" y="80" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579278424331">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state x="487" y="80" width="683" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1533.873@67.27.1533.873" timestamp="1579278424331" />
+    <state x="578" y="81" width="500" height="762" key="refactoring.ChangeSignatureDialog" timestamp="1579278105640">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state x="578" y="81" width="500" height="762" key="refactoring.ChangeSignatureDialog/67.27.1533.873@67.27.1533.873" timestamp="1579278105640" />
+    <state x="113" y="212" width="672" height="678" key="search.everywhere.popup" timestamp="1579437178166">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state x="113" y="212" width="672" height="678" key="search.everywhere.popup/67.27.1533.873@67.27.1533.873" timestamp="1579437178166" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

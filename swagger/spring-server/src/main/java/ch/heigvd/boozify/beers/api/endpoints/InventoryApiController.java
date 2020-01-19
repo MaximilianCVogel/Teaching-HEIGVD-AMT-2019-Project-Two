@@ -2,13 +2,19 @@ package ch.heigvd.boozify.beers.api.endpoints;
 
 import ch.heigvd.boozify.beers.api.InventoryApi;
 import ch.heigvd.boozify.beers.entities.BarEntity;
+import ch.heigvd.boozify.beers.model.Bar;
+import ch.heigvd.boozify.beers.api.endpoints.BarsApiController;
+import ch.heigvd.boozify.beers.api.endpoints.BeersApiController;
+import ch.heigvd.boozify.beers.model.Beer;
 import ch.heigvd.boozify.beers.repositories.BarRepository;
 import ch.heigvd.boozify.beers.entities.BeerEntity;
 import ch.heigvd.boozify.beers.repositories.BeerRepository;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,25 +30,45 @@ public class InventoryApiController implements InventoryApi {
     @Autowired
     BarRepository barRepository;
 
-    public ResponseEntity<Void> getTest() {
-        return new ResponseEntity<>(null, HttpStatus.OK);
+    public ResponseEntity<List<Bar>> getBarsServingBeer(@ApiParam(value = "",required=true) @PathVariable("name") String name) {
+        List<Bar> barsServingBeer = new ArrayList<>();
+
+        BeerEntity beer = beerRepository.findByName(name);
+        List<BarEntity> barEntities = beer.getBars();
+
+        for (BarEntity barEntity : barEntities) {
+            barsServingBeer.add(toBar(barEntity));
+        }
+
+        return ResponseEntity.ok(barsServingBeer);
     }
 
-    /*
-    public ResponseEntity<List<Bar>> getBarsServingBeer() {
-        List<Bar> bars = new ArrayList<>();
-        for (BarEntity barEntity : barRepository.findAll()) {
-            bars.add(toBar(barEntity));
+    public ResponseEntity<List<Beer>> getBeersServedByBar(@ApiParam(value = "",required=true) @PathVariable("name") String name) {
+        List<Beer> beersServed = new ArrayList<>();
+
+        BarEntity bar = barRepository.findByName(name);
+        List<BeerEntity> beerEntities = bar.getBeers();
+
+        for (BeerEntity beerEntity : beerEntities) {
+            beersServed.add(toBeer(beerEntity));
         }
-        return ResponseEntity.ok(bars);
+
+        return ResponseEntity.ok(beersServed);
     }
 
-    public ResponseEntity<List<Beer>> getBeersServedByBar() {
-        List<Beer> beers = new ArrayList<>();
-        for (BeerEntity beerEntity : beerRepository.findAll()) {
-            beers.add(toBeer(beerEntity));
-        }
-        return ResponseEntity.ok(beers);
-    }*/
+    private Bar toBar(BarEntity entity) {
+        Bar bar = new Bar();
+        bar.setName(entity.getName());
+        bar.setAddress(entity.getAddress());
+        return bar;
+    }
+
+    private Beer toBeer(BeerEntity entity) {
+        Beer beer = new Beer();
+        beer.setName(entity.getName());
+        beer.setType(entity.getType());
+        beer.setAlcohol(entity.getAlcohol());
+        return beer;
+    }
 
 }

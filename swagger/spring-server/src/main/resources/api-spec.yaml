@@ -160,13 +160,43 @@ paths:
         "204":
           description: bar deleted
 
-  /inventory:
+  /inventory/beer/{name}:
     get:
-      description: for testing purposes
-      operationId: getTest
+      description: get a list of bars serving given beer
+      operationId: getBarsServingBeer
+      produces:
+        - application/json
+      parameters:
+        - name: name
+          in: path
+          required: true
+          type: string
       responses:
         "200":
-          description: test ok
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Bar'
+
+  /inventory/bar/{name}:
+    get:
+      description: get a list of beers served by given bar
+      operationId: getBeersServedByBar
+      produces:
+        - application/json
+      parameters:
+        - name: name
+          in: path
+          required: true
+          type: string
+      responses:
+        "200":
+          description: success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Beer'
 
 definitions:
   Beer:

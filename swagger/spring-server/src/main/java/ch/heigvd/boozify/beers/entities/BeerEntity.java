@@ -1,12 +1,16 @@
 package ch.heigvd.boozify.beers.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import ch.heigvd.boozify.beers.entities.BarEntity;
+import ch.heigvd.boozify.beers.model.Bar;
+
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
+@Table(
+        name = "beer_entity"
+)
 public class BeerEntity implements Serializable {
 
     @Id
@@ -16,6 +20,13 @@ public class BeerEntity implements Serializable {
     private String name;
     private String type;
     private int alcohol;
+
+    @ManyToMany(mappedBy = "beers")
+    private List<BarEntity> bars;
+
+    public List<BarEntity> getBars() {     return bars;   }
+    public void setBars(List<BarEntity> bars) {     this.bars = bars;   }
+    public void addBar(BarEntity bar) {   this.bars.add(bar);   }
 
     public Long getBeer_id() { return beer_id; }
 
