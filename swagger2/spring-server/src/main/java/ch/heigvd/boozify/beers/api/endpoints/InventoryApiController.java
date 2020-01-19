@@ -56,6 +56,16 @@ public class InventoryApiController implements InventoryApi {
         return ResponseEntity.ok(beersServed);
     }
 
+    public ResponseEntity<Void> addBeerToBar(@ApiParam(value = "",required=true) @PathVariable("name") String name, @ApiParam(value = "",required=true) @PathVariable("beer") String beer) {
+        BarEntity barToLink = barRepository.findByName(name);
+        BeerEntity beerToLink = beerRepository.findByName(beer);
+
+        barToLink.addBeer(beerToLink);
+        beerToLink.addBar(barToLink);
+
+        return new ResponseEntity<>(null, HttpStatus.OK);
+    }
+
     private Bar toBar(BarEntity entity) {
         Bar bar = new Bar();
         bar.setName(entity.getName());

@@ -198,6 +198,23 @@ paths:
             items:
               $ref: '#/definitions/Beer'
 
+  /inventory/bar/{name}/{beer}:
+    post:
+      description: add a given beer to the inventory of a given bar
+      operationId: addBeerToBar
+      parameters:
+        - name: name
+          in: path
+          required: true
+          type: string
+        - name: beer
+          in: path
+          required: true
+          type: string
+      responses:
+        "200":
+          description: added beer to bar's inventory
+
 definitions:
   Beer:
     type: object
