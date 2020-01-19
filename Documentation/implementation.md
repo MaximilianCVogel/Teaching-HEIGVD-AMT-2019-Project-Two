@@ -157,9 +157,13 @@ Ce controller fait le lien entre les bières et les bars en permettant de récup
 
 Permet de renvoyer une liste de toutes les bières dans l'inventaire d'un bar donné. Il faut indiquer le nom du bar.
 
+![get beers served by bar](assets/get_BeersFromBar.jpg)
+
 ### /inventory/beer/{name}
 
 Permet de renvoyer une liste de tous les barres ayant la bière (d'après son nom) indiquée dans leur inventaire.
+
+![get bars serving beer](assets/get_BarsFromBeer.jpg)
 
 ### /inventory/bar/{name}/{beer}
 
